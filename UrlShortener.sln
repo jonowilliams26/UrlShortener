@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShorteningService", "ShorteningService\ShorteningService.csproj", "{6A5A7E46-6114-40BC-A8E9-F847C89108F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A5A7E46-6114-40BC-A8E9-F847C89108F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5A7E46-6114-40BC-A8E9-F847C89108F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5A7E46-6114-40BC-A8E9-F847C89108F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5A7E46-6114-40BC-A8E9-F847C89108F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {705F3E6A-B780-4782-8FE5-8078AFDFBC33}
+	EndGlobalSection
+EndGlobal

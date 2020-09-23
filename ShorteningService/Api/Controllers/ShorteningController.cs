@@ -19,7 +19,7 @@ namespace ShorteningService.Api.Controllers
         public async Task<IActionResult> ShortenUrl(ShortenUrlCommand command)
         {
             var result = await mediator.Send(command);
-            return Ok(result);
+            return result.ToResponse();
         }
     }
 }

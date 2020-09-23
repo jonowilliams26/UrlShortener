@@ -9,8 +9,25 @@ namespace ShorteningService.Application.Commands
 {
     public class ShortenUrlCommand : IRequest<CQRSResponse>
     {
-        // TODO: Validate URL
         public string Url { get; set; }
+    }
+
+    public class ShortenUrlCommandValidator : IValidator<ShortenUrlCommand>
+    {
+        public Task<ValidationResult> Validate(ShortenUrlCommand request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Url))
+                return Task.FromResult(ValidationResult.Error("A url is required."));
+
+            // Confirm the URL is a valid URL
+            Uri uriResult;
+            bool isUrlValid = Uri.TryCreate(request.Url, UriKind.Absolute, out uriResult)
+                && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+            if(!isUrlValid)
+                return Task.FromResult(ValidationResult.Error("Url is invalid."));
+
+            return Task.FromResult(ValidationResult.Success);
+        }
     }
 
     public class ShortenUrlCommandHandler : IRequestHandler<ShortenUrlCommand, CQRSResponse>
@@ -24,6 +41,7 @@ namespace ShorteningService.Application.Commands
 
         public async Task<CQRSResponse> Handle(ShortenUrlCommand command, CancellationToken cancellationToken)
         {
+            throw new Exception("This is a test unhandled exception");
             var complete = false;
             string key;
             do

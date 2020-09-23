@@ -22,7 +22,7 @@ namespace ShorteningService.Api.Controllers
             if (result.IsSuccess)
                 return Redirect(result.Data);
             else
-                return NotFound();
+                return result.ToResponse();
         }
     }
 }

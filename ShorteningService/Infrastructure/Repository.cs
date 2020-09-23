@@ -23,5 +23,10 @@ namespace ShorteningService.Infrastructure
             var value = await redis.StringGetAsync(key);
             return !value.IsNullOrEmpty;
         }
+
+        public async Task<string> GetUrl(string key)
+        {
+            return await redis.StringGetAsync(key);
+        }
     }
 }

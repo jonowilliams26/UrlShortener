@@ -6,5 +6,6 @@ namespace ShorteningService.Application.Interfaces
     {
         Task<bool> DoesKeyExist(string key);
         Task Add(string key, string url);
+        Task<string> GetUrl(string key);
     }
 }

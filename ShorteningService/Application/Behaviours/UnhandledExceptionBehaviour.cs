@@ -11,7 +11,6 @@ namespace ShorteningService.Application.Behaviours
         where TResponse : CQRSResponse, new()
     {
         private readonly ILogger<UnhandledExceptionBehavior<TRequest, TResponse>> logger;
-        private readonly IServiceProvider serviceProvider;
 
         public UnhandledExceptionBehavior(ILogger<UnhandledExceptionBehavior<TRequest, TResponse>> logger)
         {

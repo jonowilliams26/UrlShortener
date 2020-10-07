@@ -41,7 +41,6 @@ namespace ShorteningService.Application.Commands
 
         public async Task<CQRSResponse> Handle(ShortenUrlCommand command, CancellationToken cancellationToken)
         {
-            throw new Exception("This is a test unhandled exception");
             var complete = false;
             string key;
             do
